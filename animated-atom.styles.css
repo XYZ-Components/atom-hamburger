@@ -1,0 +1,170 @@
+button {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  width: 3rem;
+  height: 3rem;
+  transition: all 300ms cubic-bezier(.61, .01, .42, 1);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.atom--hamburger-component {
+  height: 0;
+  border: .15rem solid black;
+  width: 2.2rem;
+  display: block;
+  position: absolute;
+  transition: all 300ms cubic-bezier(.61, .01, .42, 1);
+  background:black;
+}
+
+button:hover {
+  transition-delay: 100ms;
+  transform: scale(1.1);
+}
+
+button:hover div:nth-child(3):before {
+  width: .2rem;
+  height: .2rem;
+  border-radius: .5rem;
+  background: red;
+}
+
+button:hover div {
+  border: .2rem solid red;
+  height: .9rem;
+  border-radius: 50%;
+  margin-left: -.1rem;
+  margin-top: .2rem;
+  animation: atom 300ms linear 1;
+  width: 2.5rem;
+  top: 0;
+  background:transparent;
+}
+
+button:focus {
+  outline: 0;
+}
+
+div:nth-child(1) {
+  top: 0;
+}
+
+div:nth-child(2) {
+  top: .8rem;
+}
+
+div:nth-child(3) {
+  top: 1.6rem;
+}
+
+div:nth-child(3):before {
+  opacity: 0;
+  animation: ball 1.5s linear infinite;
+  content: '';
+  border: .2rem solid blue;
+  display: block;
+  position: relative;
+  top: .025rem;
+}
+
+button:hover div:nth-child(1) {
+  transform: rotate(-33deg);
+}
+
+button:hover div:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+button:hover div:nth-child(3) {
+  transform: rotate(33deg);
+}
+
+button:hover div:nth-child(3):before {
+  opacity: 1;
+  transition: opacity 600ms cubic-bezier(.61, .01, .42, 1);
+  ;
+}
+
+button:active:hover div:nth-child(3):before,
+button:active div:nth-child(3):before,
+button:active div:nth-child(2) {
+  opacity: 0;
+  transition: all 200ms;
+}
+
+button:active div {
+  border: .15rem solid red;
+  height: 0;
+  border-radius: 0%;
+  margin-left: -.1rem;
+  margin-top: .6rem;
+  animation: division 300ms linear 1;
+  width: 2.5rem;
+  top: 0;
+}
+
+button:active div:nth-child(2) {
+  width: 0px;
+}
+
+button:active div:nth-child(3) {
+  transform: rotate(45deg);
+}
+
+button:active div:nth-child(1) {
+  transform: rotate(-45deg);
+}
+
+@keyframes atom {
+  0% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes division {
+  0% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes ball {
+  0% {
+    left: -20%;
+    top: 10%;
+  }
+  10% {
+    left: 10%;
+    top: -35%;
+  }
+  25% {
+    left: 45%;
+    top: -50%;
+  }
+  40% {
+    left: 80%;
+    top: -20%;
+  }
+  50% {
+    left: 98%;
+    top: 18%;
+  }
+  60% {
+    left: 80%;
+    top: 50%;
+  }
+  75% {
+    left: 45%;
+    top: 80%;
+  }
+  90% {
+    left: 0%;
+    top: 60%;
+  }
+  100% {
+    left: -20%;
+    top: 10%;
+  }
+}
