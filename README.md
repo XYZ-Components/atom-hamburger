@@ -17,3 +17,9 @@ Import the component into your <code>App.js</code>:
 </code>
 
 And render the component in your render function via the tag <code>AtomicHamburger</code> .
+
+# Please Note
+
+My components designs assume you are following <code>CSS</code> best practices. As such, it is assumed
+your default <code>font-size</code> is set in your <code>html</code> tags as <code>10px</code>. All calculations
+are done on this basis to make scaling simpler using <code>rem</code>. 
