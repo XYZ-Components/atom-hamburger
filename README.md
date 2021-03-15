@@ -6,6 +6,8 @@
 
 </div>
 
+## Usage 
+
 To use, simply copy the component files into your own component directory within a <code>React</code> project. To reposition the component, remove the atom styles for the container in css, this will automatically add the hamburger to the top-right. 
 
 Import the component into your <code>App.js</code>:
